@@ -9,25 +9,14 @@
 
 <body>
   <script>
-  /**
- * @param {number[]} nums
- * @return {number}
- */
- var removeElement = function(nums, val) {
-    let slow = 0
-    let fast = 0
-
-    while(fast <= nums.length-1) {
-        if(nums[fast] !== val) {
-            nums[slow] = nums[fast]
-            slow++
-        }
-        fast++
+    const queue = [1,2,3,5]
+    for (let i = 0; i < queue.length - 1; i++) {
+      queue.push(queue.shift()); // 让最后一个元素排到前面
     }
-    return slow
-};
 
-removeElement([0,1,2,2,3,0,4,2],2)
+    console.log(queue);
+    
+
   </script>
 </body>
 
